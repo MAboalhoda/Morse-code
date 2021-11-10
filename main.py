@@ -23,7 +23,7 @@ while running == True:
         for letter in text:
             try:
                 if letter == " ":
-                    encoded_txt = encoded_txt + "\n"
+                    encoded_txt = encoded_txt + " / "
                 else:
                     encoded_txt = encoded_txt + " " + morse_dict[letter]
             except KeyError:
@@ -32,6 +32,19 @@ while running == True:
         print(f"Your Morse encoded text is:\n{encoded_txt}")
 
     elif model.lower() == "d":
-        pass
+        code_txt = input("Please input your Morse Code: ").upper()
+        code_list = []
+        for code in code_txt.split(" "):
+            code_list.append(code)
+        decoded_txt = ""
+        for elem in code_list:
+            for key, value in morse_dict.items():
+                if elem == value and elem != "/":
+                    decoded_txt += key
+                elif elem == "/":
+                    elem = " "
+                    decoded_txt += elem
+        print(decoded_txt)
+
     else:
         running = False
