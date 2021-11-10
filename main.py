@@ -14,8 +14,9 @@ morse_dict = { 'A':'.-', 'B':'-...',
                     '?':'..--..', '/':'-..-.', '-':'-....-',
                     '(':'-.--.', ')':'-.--.-'}
 
-model = input("Please Type 'E' to encode or 'D' to Decode 'Exit' to exit: ")
-while model.lower() != 'exit':
+running = True
+while running == True:
+    model = input("Please Type 'E' to encode or 'D' to Decode 'Exit' to exit: ")
     if model.lower() == "e":
         text = input("Please input your text: ").upper()
         encoded_txt = ""
@@ -30,7 +31,7 @@ while model.lower() != 'exit':
 
         print(f"Your Morse encoded text is:\n{encoded_txt}")
 
-    elif model.lower() != "d":
+    elif model.lower() == "d":
         pass
     else:
-        model.lower() == "exit"
+        running = False
