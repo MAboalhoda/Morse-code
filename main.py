@@ -18,6 +18,7 @@ morse_dict = { 'A':'.-', 'B':'-...',
                     '(':'-.--.', ')':'-.--.-'}
 
 running = True
+
 while running == True:
     model = input("Please Type 'E' to encode or 'D' to Decode 'Exit' to exit: ")
     if model.lower() == "e":
