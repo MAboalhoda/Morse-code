@@ -1,3 +1,5 @@
+from intro import intro
+print(intro)
 morse_dict = { 'A':'.-', 'B':'-...',
                     'C':'-.-.', 'D':'-..', 'E':'.',
                     'F':'..-.', 'G':'--.', 'H':'....',
